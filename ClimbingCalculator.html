@@ -7,12 +7,13 @@
         <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
       </head>
       <body>
-        <p>Click the button to display an alert box:</p>
-		<p><input id="FrenchGrade" type="text" name="name"/>
+        <p>Click the button to convert from French Grade to YSD:</p>
+		<form class="form-inline">
+		<input id="FrenchGrade" type="text" name="name"placeholder="French"/>
 
-		<button onclick="calculate()">calculate</button>
+		<button class="btn btn-success" onclick="calculate()">calculate</button>
 
-		<input id="YSD" type="text" name="Yosemite"/></p>
+		<input id="YSD" type="text" name="Yosemite"placeholder="Yosemite Decimal System"/></form>
 
 		<p>French Grade</p>
 
