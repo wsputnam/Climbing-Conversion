@@ -8,6 +8,9 @@ body {
     margin-left: 10px;
     margin-right: 10px;
   }
+  #answer {
+    margin-top: 15px;
+  }
 
   /* Custom container */
   .container-narrow {
