@@ -20,15 +20,21 @@
 
         <p>Click the button to convert from French Grade to YSD:</p>
 		<form class="form-inline">
-		<input id="FrenchGrade" type="text" name="name"placeholder="French"/>
+    <div class="bs-docs-grid">
+		  <div class="span3"><input id="FrenchGrade" type="text" name="name"placeholder="French Grade"/></div>
 
-		<button class="btn btn-success" onclick="calculate()">calculate</button>
+		  <div id="calc-div" class="span1"><button class="btn btn-success" onclick="calculate()">calculate</button></div>
 
-		<input id="YSD" type="text" name="Yosemite"placeholder="Yosemite Decimal System"/></form>
+      <div class="span3"><input id="YSD" type="text" name="Yosemite"placeholder="Yosemite Decimal System"/></div>
+    </div>
+    </form>
 
 	<div class="bs-docs-grid">
       <div class="span3">French Grade</div>
       <div class="span3 offset1">Yosemite Decimal System</div>
+    </div>
+    
+    <div id="answer">
     </div>
 
         <script src="http://code.jquery.com/jquery.js"></script>
