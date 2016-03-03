@@ -1,14 +1,25 @@
 $( document ).ready(function() {
     console.log( "ready!" );
+    $("#calc-button").click(function( event ) {
+		event.preventDefault();
+		var fr=$("#FrenchGrade").val();
+		var Ydd=$("#YSD").val();
+		if (fr!="") {
+		showanswer(fty[fr],fr);
+		}
+		if (Ydd!="") {
+		showanswer(Ydd,Yd[Ydd]);
+		}
+		$("#FrenchGrade").val("");
+		$("#YSD").val("");
+	});	
 });
 
-function showanswer(Y) {
-  $("#YSD").val(Y);
+function showanswer(Y,F) {
+  $("#answer").prepend("<div class='span3'>"+F+"</div>"+
+  	"<div class='span3 offset1'>"+Y+"</div>");
 }
 
-function leftanswer(Y) {
-	$("#FrenchGrade").val(Y);
-}
 
 var fty = [];
 fty["1a"]="5.0";
@@ -79,9 +90,3 @@ Yd["5.14c"]="8c+";
 Yd["5.14d"]="9a";
 Yd["5.15a"]="9a";
 
-function calculate() {
-var fr=$("#FrenchGrade").val();
-var Ydd=$("#YSD").val();
-showanswer(fty[fr]);
-leftanswer(Yd[Ydd]);
-}
